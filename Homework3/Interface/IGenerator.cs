@@ -2,7 +2,9 @@
 {
     public interface IGenerator
     {
-        public void GenerateNumber(int begin, int end);
+        public int MinValue { get; set; }
+        public int MaxValue { get; set; }
+        public void GenerateNumber();
         public int Number { get; set; }
     }
 }

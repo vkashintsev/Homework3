@@ -4,9 +4,10 @@ namespace Homework3.Settings
 {
     public class ExtendSettings : DefaultSettings
     {
-        public override void GenerateNumber(IGenerator _generator)
+        public override void SetBorders(IGenerator _generator, int minValue, int maxValue)
         {
-            _generator.GenerateNumber(0, 10000);
+            _generator.MinValue = minValue * 2;
+            _generator.MaxValue = maxValue * 2;
         }
     }
 }

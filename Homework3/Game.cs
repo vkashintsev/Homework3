@@ -14,7 +14,8 @@ namespace Homework3
         {
             _generator = new Generator();
             _settings = new ExtendSettings();
-            _settings.GenerateNumber(_generator);
+            _settings.SetBorders(_generator, 0, 1000);
+            _generator.GenerateNumber();
             _check = new Validator(_generator);
 
         } 

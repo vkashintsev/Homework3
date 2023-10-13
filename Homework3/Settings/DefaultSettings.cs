@@ -4,9 +4,10 @@ namespace Homework3.Settings
 {
     public class DefaultSettings
     {
-        public virtual void GenerateNumber(IGenerator _generator)
+        public virtual void SetBorders(IGenerator _generator, int minValue, int maxValue)
         {
-            _generator.GenerateNumber(0, 1000);
+            _generator.MinValue = minValue;
+            _generator.MaxValue = maxValue;
         }
     }
 }
