@@ -13,7 +13,7 @@ namespace Homework3
         public Game()
         {
             _generator = new Generator();
-            _settings = new ExplainSettings();
+            _settings = new ExtendSettings();
             _settings.GenerateNumber(_generator);
             _check = new Validator(_generator);
 

@@ -2,7 +2,7 @@
 
 namespace Homework3.Settings
 {
-    public class ExplainSettings : DefaultSettings
+    public class ExtendSettings : DefaultSettings
     {
         public override void GenerateNumber(IGenerator _generator)
         {
