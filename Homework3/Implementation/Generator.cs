@@ -12,6 +12,7 @@ namespace Homework3.Implementation
         public Generator() {
             MinValue = 0;
             MaxValue = 100;
+            Number = 0;
         }
         public void GenerateNumber()
         {

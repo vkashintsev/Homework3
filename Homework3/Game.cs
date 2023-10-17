@@ -10,15 +10,25 @@ namespace Homework3
         private IValidator _check;
         private int _count;
         private DefaultSettings _settings;
-        public Game()
+        public Game(IGenerator generator, IValidator validator, DefaultSettings settings)
         {
-            _generator = new Generator();
-            _settings = new ExtendSettings();
-            _settings.SetBorders(_generator, 0, 1000);
-            _generator.GenerateNumber();
-            _check = new Validator(_generator);
+            if (generator == null || generator.Number == 0)
+            {
+                _generator = new Generator();
+                _generator.GenerateNumber();
+            }
+            else
+                _generator = generator;
+            if (settings == null)
+            {
+                _settings = new ExtendSettings();
+                _settings.SetBorders(_generator, 0, 1000);
+            }
+            else
+                _settings = settings;
+            _check = (validator == null) ? new Validator(_generator) : validator;
 
-        } 
+        }
         public void Start()
         {
             _count = 0;
